@@ -3,6 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript">
+        window.onload = function (){
+            document.querySelector(".menuMobile").addEventListener ("click",function (){
+                if(document.querySelector(".menuMobile--home nav ul").style.display == 'flex') {
+                    document.querySelector(".menuMobile--home nav ul").style.display = 'none';
+                } else {
+                    document.querySelector(".menuMobile--home nav ul").style.display = 'flex';
+                }
+            });
+        };
+        </script>
+
+
     <title>Pixel</title>
     <link rel="stylesheet" href="assets/style.css"/>
 </head>
@@ -13,6 +27,17 @@
                 <div class="menuMobile--kanter">Kanter</div>
                  <div class="menuMobile--home">
                      <nav>
+
+
+
+                        <div class="menuMobile">
+                            <div class="mm_line"></div>
+                            <div class="mm_line"></div>
+                            <div class="mm_line"></div>
+                        </div>
+
+
+
                          <ul>
                              <li><a href="">Home ⌄</a></li>
                              <li><a href="">Pages ⌄</a></li>
@@ -142,7 +167,7 @@
                 </p>
             </div>
             <div class="services-section">
-                <div class="services-section-box" style="height: 270px;">
+                <div class="services-section-box" >
                     <img src="assets/images/pie-chart.png"/>
                     <h6>Branding</h6>
                     <p>Claritas est estiam processus dynamicus qui sequitur</p>

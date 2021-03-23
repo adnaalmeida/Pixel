@@ -119,8 +119,8 @@ button {
 section {
     width: 100%;
 }
-.default-light{
-    height: 500px;
+.default-light {
+    height: auto;
     flex: 1;
 }
 .about-top {
@@ -167,7 +167,6 @@ h3:nth-child(1){
     display: flex;
     margin: 20px;
     width: 315px;
-    background-color: aqua;
 }
 .about-img img{
     width: 50px;
@@ -192,7 +191,7 @@ h4:nth-child(2){
 }
 .default-dark {
     background-image: url('images/6Yzfspk.jpg');
-    height:500px;
+    height:auto;
     width: 100%;
     background-position: center;
     background-size: cover;
@@ -238,7 +237,7 @@ h5:nth-child(2){
     display: flex;
     align-items: center;
     justify-content: center;
-    height:300px;
+    height:auto;
     margin-top: 10px;
 }
 .services-section-box {
@@ -265,34 +264,43 @@ h5:nth-child(2){
     color: #b8b9c6;
     margin-top: -10px;
 }
+.menuMobile {
+    display:none;
+    width:40px;
+    height:40px;
+    margin-top:15px;
+    margin-bottom:40px;
+    margin-right:20px;
+}
+.mm_line {
+    height:3px;
+    background-color:#39aae1;
+}
+
+
+
+
 @media (min-width:640px)and (max-width:900px) {
+    .menuMobile--kanter,
+    .menuMobile--home li {
+        margin-left: 10px;
+    }
+    .menuMobile--home li,
+    .menu--Sections h2,
+    .menu--Sections p,
+    h4,
+    .about-desc p,
+    .services-section-box h6 {
+        font-size: 13px;
+    }
+    .menu--Sections img {
+        width: 45px;
+    } 
     .about-img img {
         width: 30px;
         padding-top: 18px;
         margin:0px;
     }
-    h4,
-    .about-desc p {
-        font-size: 13px;
-    }
-    .menuMobile--kanter {
-        margin-left: 10px;
-    }
-    .menuMobile--home li {
-        font-size: 13px;
-        margin-left: 10px;
-    }
-    .menu--Sections img {
-        width: 45px;
-    }
-    .menu--Sections h2 {
-        font-size: 13px;
-    }
-    .menu--Sections p {
-        font-size: 13px;
-    }
-
-
     .services-our p {
         width:500px;
     }
@@ -303,32 +311,97 @@ h5:nth-child(2){
     .services-section-box img {
         width: 40px;
     }
-    .services-section-box h6 {
-        font-size: 13px;
-    }
     .services-section-box p {
         font-size: 15px;
     }
 }
-
-
-
-
-
-
-/*
-@media (min-width:450px) and (max-width:890px) {
-    .menuMobile--home {
+@media(max-width:639px) {
+    .menu--Sections h2,
+    .menu--Sections p,
+    h4,
+    .about-desc p,
+    .about-top p,
+    .services-section-box h6 {
+        font-size: 13px;
+    }
+    header {
+        height: 1160px;
+    }
+    .header--menu {
+        height: auto;
+    }
+    .header--menuMobile {
+        width: 100vw;
         flex-wrap: wrap;
     }
-}
-
-/*
-.about-section {
-    display: flex;
-    margin: 20px;
-    width: 315px;
-    max-height: 252px;
-    flex-wrap: wrap;
-    background-color: aqua;
+    .menuMobile--kanter {
+        font-size: 8px;
+        height: 25px;
+        width: 60px;
+        margin-top: 18px;
+        justify-content: center;
+        margin-right: 80px;
+    }
+    .menuMobile--home li {
+        font-size: 8px;
+        margin-bottom: 8px;
+        margin-left: -33px;
+    }
+    nav ul {
+        flex-direction:column;
+        display:none;
+        position: absolute;
+        width:100%;
+        margin-top: -10px;
+    }
+    .menuMobile{
+        display:flex;
+        flex-direction:column;
+        justify-content: space-around;
+    }
+    .header--menuCenter {
+        height: 265px;;
+    }
+    .header--menuCenter h1 {
+        font-size: 35px;
+    }
+    .h1--style {
+        margin-top: 50px;
+        margin-bottom: -17px;
+    }
+    .header--menuCenter p {
+        font-size: 12px;
+    }
+    .header--menuSections {
+        flex-direction: column;
+        margin-top: 133px;
+    }
+    .about-bottom {
+        flex-direction: column;
+    }
+    .menu--Sections img {
+        width: 45px;
+    } 
+    .about-img img {
+        width: 30px;
+        padding-top: 18px;
+        margin:0px;
+    }
+    .services-our p {
+        width:300px;
+        font-size: 11px;
+    }
+    .services-section-box {
+        margin: 5px;
+        height: 200px;
+    }
+    .services-section-box img {
+        width: 40px;
+    }
+    .services-section-box p {
+        font-size: 15px;
+    }
+    .services-section {
+        flex-direction: column;
+    }
 }
